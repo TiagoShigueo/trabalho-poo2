@@ -15,6 +15,7 @@ public class ClienteController {
     public void adicionarCliente(String nome, String sobrenome, String rg, String cpf, String endereco) {
         Cliente cliente = new Cliente(0, nome, sobrenome, rg, cpf, endereco);
         clienteModel.adicionarCliente(cliente);
+        
     }
 
     public void editarCliente(Cliente cliente) {
