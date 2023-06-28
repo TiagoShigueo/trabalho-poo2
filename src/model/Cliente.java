@@ -16,12 +16,7 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    // Ver se esse contrutor vazio não vai dar erro
-    public Cliente() {
-
-	}
-
-	public int getId() {
+    public int getId() {
     	return id;
     }
     
