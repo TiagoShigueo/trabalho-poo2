@@ -1,7 +1,7 @@
 package model;
 
 
-public abstract class Conta implements IConta {
+public abstract class Conta implements ContaI {
     private int numero;
     private double depositoInicial;
     private double saldo;

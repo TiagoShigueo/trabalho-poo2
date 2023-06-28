@@ -61,7 +61,6 @@ public class ContaView extends javax.swing.JPanel {
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
-        
         jPanel1.revalidate();
         jPanel1.repaint();
     }
@@ -214,6 +213,7 @@ public class ContaView extends javax.swing.JPanel {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+        //jPanel1.setVisible(true); Não mudou nada
     }
     
     private void jComboContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboContaActionPerformed
