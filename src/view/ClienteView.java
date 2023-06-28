@@ -161,7 +161,7 @@ public class ClienteView {
         preencherTabela();
     }
 
-    // Método para remover um cliente
+ // Método para remover um cliente
     private void removerCliente() {
         int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
@@ -169,15 +169,18 @@ public class ClienteView {
             return;
         }
 
-        int id = Integer.parseInt(tableModel.getValueAt(selectedRow, 0).toString());
-        clienteController.removerCliente(id);
+        int dialogResult = JOptionPane.showConfirmDialog(frame, "Deseja realmente remover o cliente?", "Confirmação", JOptionPane.YES_NO_OPTION);
+        if (dialogResult == JOptionPane.YES_OPTION) {
+            int id = Integer.parseInt(tableModel.getValueAt(selectedRow, 0).toString());
+            clienteController.removerCliente(id);
 
-        // Limpa os campos de texto
-        limparCampos();
+            limparCampos();
 
-        // Atualiza a tabela com os clientes atualizados
-        preencherTabela();
+            // Atualiza a tabela
+            preencherTabela();
+        }
     }
+
 
     // Método para preencher a tabela com os clientes existentes
     private void preencherTabela() {
